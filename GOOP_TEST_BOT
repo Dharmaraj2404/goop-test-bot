@@ -79,16 +79,23 @@ def start(bot, update):
     msg= "Hello! ^_^ I am GOOP Test Bot"
     bot.send_message(chat_id=update.message.chat_id, text=msg)
 
+@run_async
+def fuck(bot, update):
+    msg= "Fuck you asshole!!"
+    bot.send_message(chat_id=update.message.chat_id, text=msg)
+
 #####################################################################################################################
 
 #configure command
 start_handler = CommandHandler('start', start)
+start_handler = Commandhandler('fuck', fuck)
 
 #####################################################################################################################
 
 #set command
 
 dispatcher.add_handler(start_handler)
+dispatcher.add_handler(fuck_handler)
 
 #####################################################################################################################
 
