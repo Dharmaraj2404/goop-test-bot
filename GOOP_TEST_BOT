@@ -102,6 +102,7 @@ def help(bot, update):
 start_handler     = CommandHandler('start', start)
 fuck_handler      = CommandHandler('fuck', fuck)
 developer_handler = CommandHandler('developer', developer)
+help_handler      = CommandHandler('help', help)
 
 #####################################################################################################################
 
@@ -110,6 +111,7 @@ developer_handler = CommandHandler('developer', developer)
 dispatcher.add_handler(start_handler)
 dispatcher.add_handler(fuck_handler)
 dispatcher.add_handler(developer_handler)
+dispatcher.add_handler(help_handler)
 
 #####################################################################################################################
 
