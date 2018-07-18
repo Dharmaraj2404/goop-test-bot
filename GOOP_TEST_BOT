@@ -109,12 +109,9 @@ def myid(bot, update):
 @run_async
 def pingteam(bot, update):
     if update.message.chat_id == -1001386729992:
-        msg = "**Need Assistance:**\n"
-	msg+= "@Asaf31214     \n"
-	msg+= "@dharmaraj_24  \n"
-	msg+= "@VrozAnims2003 \n"
-	bot.send_message(chat_id=update.message.chat_id, text=msg, parse_mode=telegram.ParseMode.MARKDOWN)
-
+        if update.message.chat_id == vip_developer:
+			bot.send_message(chat_id=update.message.chat_id, text="Have rest Dev, Bot is restarting...")
+			
 	
 	
 #####################################################################################################################
