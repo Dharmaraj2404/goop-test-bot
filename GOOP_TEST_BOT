@@ -106,7 +106,17 @@ def myid(bot, update):
 
 	bot.send_message(chat_id=update.message.chat_id, text=msg, parse_mode=telegram.ParseMode.MARKDOWN)
 
+@run_async
+def pingteam(bot update):
+    if update.message.chat_id == -1001386729992:
+        msg = "**Need Assistance:**\n"
+	msg+= "@Asaf31214\n"
+	msg+= "@dharmaraj_24\n"
+	msg+= "@VrozAnims2003\n"
+	bot.send_message(chat_id=update.message.chat_id, text=msg, parse_mode=telegram.ParseMode.MARKDOWN)
 
+	
+	
 #####################################################################################################################
 
 #configure command
@@ -115,6 +125,7 @@ fuck_handler      = CommandHandler('fuck', fuck)
 developer_handler = CommandHandler('developer', developer)
 help_handler      = CommandHandler('help', help)
 myid_handler      = CommandHandler('myid', myid)
+pingteam_handler  = CommandHandler('pingteam', pingteam)
 #####################################################################################################################
 
 #set command
@@ -124,6 +135,7 @@ dispatcher.add_handler(fuck_handler)
 dispatcher.add_handler(developer_handler)
 dispatcher.add_handler(help_handler)
 dispatcher.add_handler(myid_handler)
+dispatcher.add_handler(pingteam_handler)
 
 #####################################################################################################################
 
