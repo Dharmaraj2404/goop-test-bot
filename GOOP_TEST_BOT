@@ -107,7 +107,7 @@ def myid(bot, update):
 	bot.send_message(chat_id=update.message.chat_id, text=msg, parse_mode=telegram.ParseMode.MARKDOWN)
 
 @run_async
-def pingteam(bot update):
+def pingteam(bot, update):
     if update.message.chat_id == -1001386729992:
         msg = "**Need Assistance:**\n"
 	msg+= "@Asaf31214\n"
