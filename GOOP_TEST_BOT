@@ -88,14 +88,14 @@ def fuck(bot, update):
 
 #configure command
 start_handler = CommandHandler('start', start)
-start_handler = CommandHandler('fuck', fuck)
+fuck_handler  = CommandHandler('fuck', fuck)
 
 #####################################################################################################################
 
 #set command
 
 dispatcher.add_handler(start_handler)
-dispatcher.add_handler(start_handler)
+dispatcher.add_handler(fuck_handler)
 
 #####################################################################################################################
 
