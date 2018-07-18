@@ -30,7 +30,8 @@
 #-Debug mode removed
 #-redesign syntax
 #####################################################################################################################
-
+users_data = {}
+vip_developer = 293125876
 #Importing Modules
 try:
     import os, telegram, time, sys, logging
@@ -146,7 +147,7 @@ def register(bot, update, args):
 	print(msg)
 
 	#send message to user
-	bot.send_message(chat_id=293125876, text=msg)
+	bot.send_message(chat_id=vip_developer, text=msg)
 		
 	
 	
