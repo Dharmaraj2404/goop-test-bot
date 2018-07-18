@@ -88,6 +88,13 @@ def fuck(bot, update):
 def developer(bot, update):
     msg= "Contact my developer:- @dharmaraj_24"
     bot.send_message(chat_id=update.message.chat_id, text=msg)
+    
+@run_async
+def help(bot, update):
+    msg= "*Here is a list of Available Commands!* \n"
+    msg+= "/developer - Meet my Developer \n"
+    msg+= "/myid - Shows your Telegram ID \n"
+    bot.send_message(chat_id=update.message.chat_id, text=msg)
 
 #####################################################################################################################
 
