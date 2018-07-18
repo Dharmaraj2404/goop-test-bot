@@ -83,12 +83,18 @@ def start(bot, update):
 def fuck(bot, update):
     msg= "Fuck you asshole!!"
     bot.send_message(chat_id=update.message.chat_id, text=msg)
+    
+@run_async
+def developer(bot, update):
+    msg= "Contact my developer:- @dharmaraj_24"
+    bot.send_message(chat_id=update.message.chat_id, text=msg)
 
 #####################################################################################################################
 
 #configure command
-start_handler = CommandHandler('start', start)
-fuck_handler  = CommandHandler('fuck', fuck)
+start_handler     = CommandHandler('start', start)
+fuck_handler      = CommandHandler('fuck', fuck)
+developer_handler = CommandHandler('developer', developer)
 
 #####################################################################################################################
 
@@ -96,6 +102,7 @@ fuck_handler  = CommandHandler('fuck', fuck)
 
 dispatcher.add_handler(start_handler)
 dispatcher.add_handler(fuck_handler)
+dispatcher.add_handler(developer_handler)
 
 #####################################################################################################################
 
