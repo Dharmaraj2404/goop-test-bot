@@ -98,8 +98,8 @@ def help(bot, update):
     
 @run_async
 def myid(bot, update):
-	if update.message.chat_id < 0:
-		return
+	
+
 
 	chatid  = "`"+str(update.message.chat_id)+"`"
 	msg 	= "*Your chat id*: "+chatid
