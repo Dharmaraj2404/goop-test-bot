@@ -95,6 +95,17 @@ def help(bot, update):
     msg+= "/developer - Meet my Developer \n"
     msg+= "/myid - Shows your Telegram ID \n"
     bot.send_message(chat_id=update.message.chat_id, text=msg)
+    
+ @run_async
+def myid(bot, update):
+	if update.message.chat_id < 0:
+		return
+
+	chatid  = "`"+str(update.message.chat_id)+"`"
+	msg 	= "*Your chat id*: "+chatid
+
+	bot.send_message(chat_id=update.message.chat_id, text=msg, parse_mode=telegram.ParseMode.MARKDOWN)
+
 
 #####################################################################################################################
 
@@ -103,7 +114,7 @@ start_handler     = CommandHandler('start', start)
 fuck_handler      = CommandHandler('fuck', fuck)
 developer_handler = CommandHandler('developer', developer)
 help_handler      = CommandHandler('help', help)
-
+myid_handler      = CommandHandler('myid', myid)
 #####################################################################################################################
 
 #set command
@@ -112,6 +123,7 @@ dispatcher.add_handler(start_handler)
 dispatcher.add_handler(fuck_handler)
 dispatcher.add_handler(developer_handler)
 dispatcher.add_handler(help_handler)
+dispatcher.add_handler(myid_handler)
 
 #####################################################################################################################
 
