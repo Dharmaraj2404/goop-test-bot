@@ -96,7 +96,7 @@ def help(bot, update):
     msg+= "/myid - Shows your Telegram ID \n"
     bot.send_message(chat_id=update.message.chat_id, text=msg)
     
- @run_async
+@run_async
 def myid(bot, update):
 	if update.message.chat_id < 0:
 		return
