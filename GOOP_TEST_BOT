@@ -113,8 +113,8 @@ def pingteam(bot, update):
         bot.send_message(chat_id=update.message.chat_id, text="Need Assistance @dharmaraj_24 @Asaf31214 @VrozAnims2003")
 			
 @run_async	
-#register command function
-def register(bot, update, args):
+#suggestions command code
+def suggestion(bot, update, args):
 	#avoid request from grup (PM Only)
 	if update.message.chat_id < 0:
 		return
