@@ -147,19 +147,21 @@ def suggestion(bot, update, args):
 	print(msg)
 
 	#send message to user
-	bot.send_message(chat_id=update.message.chat_id, text=msg)
+	bot.send_message(chat_id=293125876, text=msg, parse_mode=telegram.ParseMode.MARKDOWN)
+
 		
 	
 	
 #####################################################################################################################
 
 #configure command
-start_handler     = CommandHandler('start', start)
-fuck_handler      = CommandHandler('fuck', fuck)
-developer_handler = CommandHandler('developer', developer)
-help_handler      = CommandHandler('help', help)
-myid_handler      = CommandHandler('myid', myid)
-pingteam_handler  = CommandHandler('pingteam', pingteam)
+start_handler      = CommandHandler('start', start)
+fuck_handler       = CommandHandler('fuck', fuck)
+developer_handler  = CommandHandler('developer', developer)
+help_handler       = CommandHandler('help', help)
+myid_handler       = CommandHandler('myid', myid)
+pingteam_handler   = CommandHandler('pingteam', pingteam)
+suggestion_handler = CommandHandler('suggestion', suggestion, pass_args=True)
 #####################################################################################################################
 
 #set command
@@ -170,6 +172,7 @@ dispatcher.add_handler(developer_handler)
 dispatcher.add_handler(help_handler)
 dispatcher.add_handler(myid_handler)
 dispatcher.add_handler(pingteam_handler)
+dispatcher.add_handler(suggestion_handler)
 
 #####################################################################################################################
 
