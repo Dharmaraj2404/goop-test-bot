@@ -95,6 +95,7 @@ def help(bot, update):
     msg= "*Here is a list of Available Commands!* \n"
     msg+= "/developer - Meet my Developer \n"
     msg+= "/myid - Shows your Telegram ID \n"
+    msg+= "/suggestion - Let us know how can we improvement \n"
     bot.send_message(chat_id=update.message.chat_id, text=msg)
     
 @run_async
@@ -139,8 +140,9 @@ def suggestion(bot, update, args):
 
 	#make report message about user's biodata
 	msg = "NAME: "+user_firstname+"\n"
-	msg+= "USERNAME  : @"+user_username+"\n"
-	msg+= "suggestion  : "+user_suggestion+"\n"
+	msg+= "Username  : @"+user_username+"\n"
+	msg+= "Chat ID : @"+user_chatid+"\n"
+	msg+= "Suggestion  : "+user_suggestion+"\n"
 
 	print(users_data)
 	print("\n")
