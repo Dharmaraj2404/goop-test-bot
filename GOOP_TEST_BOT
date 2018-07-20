@@ -123,7 +123,7 @@ def suggestion(bot, update, args):
 	user_chatid   = update.message.chat_id
 	user_firstname= update.message.from_user.first_name
 	try:
-		user_suggestion = args[0:].join(" ")
+		user_suggestion = " ".join(args[0:])
 	except IndexError as e:
 		update.message.reply_text("Please input your suggestion!")
 		return
