@@ -155,7 +155,7 @@ def suggestion(bot, update, args):
 #channel poster code
 def post(bot, update):
     if update.message.chat_id == 293125876:
-	bot.send_message(chat_id=1383113458, text="Share @ClashersShield! Giveaway at 100 members! we are not far away!")
+	bot.send_message(chat_id=1383113458, text="Share ClashersShield! Giveaway at 100 members! we are not far away!")
     
 
 		
