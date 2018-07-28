@@ -151,6 +151,13 @@ def suggestion(bot, update, args):
 	#send message to user
 	bot.send_message(chat_id=293125876, text=msg, parse_mode=telegram.ParseMode.MARKDOWN)
 
+@run_async
+#channel poster code
+def post(bot, update):
+        if update.message.chat_id == 1383113458:
+	
+    
+
 		
 	
 	
