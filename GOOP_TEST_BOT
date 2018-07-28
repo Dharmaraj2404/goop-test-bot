@@ -154,8 +154,8 @@ def suggestion(bot, update, args):
 @run_async
 #channel poster code
 def post(bot, update):
-        if update.message.chat_id == 1383113458:
-	
+        if update.message.chat_id == 293125876:
+	bot.send_message(chat_id=1383113458, text="Share @ClashersShield! Giveaway at 100 members! we are not far away!")
     
 
 		
@@ -171,6 +171,7 @@ help_handler       = CommandHandler('help', help)
 myid_handler       = CommandHandler('myid', myid)
 pingteam_handler   = CommandHandler('pingteam', pingteam)
 suggestion_handler = CommandHandler('suggestion', suggestion, pass_args=True)
+post_handler       = CommandHandler('post', post)
 #####################################################################################################################
 
 #set command
@@ -182,6 +183,7 @@ dispatcher.add_handler(help_handler)
 dispatcher.add_handler(myid_handler)
 dispatcher.add_handler(pingteam_handler)
 dispatcher.add_handler(suggestion_handler)
+dispatcher.add_handler(post_handler)
 
 #####################################################################################################################
 
