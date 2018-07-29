@@ -156,7 +156,7 @@ def suggestion(bot, update, args):
 @run_async	
 def post(bot, update):
     if update.message.chat_id == 293125876:
-        bot.send_message(chat_id=@ClashersShield, text="This is a test message")
+        bot.send_message(chat_id='@ClashersShield', text="This is a test message")
 		
 
 	
