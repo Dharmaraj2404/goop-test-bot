@@ -115,43 +115,6 @@ def pingteam(bot, update):
     if update.message.chat_id == -1001386729992:
         bot.send_message(chat_id=update.message.chat_id, text="Need Assistance @dharmaraj_24 @Asaf31214 @VrozAnims2003")
 			
-@run_async	
-#suggestions command code
-def suggestion(bot, update, args):
-	#avoid request from grup (PM Only)
-	if update.message.chat_id < 0:
-		return
-	#user data
-	user_username = update.effective_user.username
-	user_chatid   = update.message.chat_id
-	user_firstname= update.message.from_user.first_name
-	try:
-		user_suggestion = " ".join(args[0:])
-	except IndexError as e:
-		update.message.reply_text("Please input your suggestion!")
-		return
-
-	#filter for avoid spammer
-	if len(user_suggestion) > 3000:
-		bot.send_message(chat_id=update.message.chat_id, text="*Please do not exceed 3000 characters*", parse_mode=telegram.ParseMode.MARKDOWN)
-		return
-
-
-	#send user data to users_data
-	users_data[str(user_chatid)]= {"user_firstname":str(user_firstname), "user_username":user_username, "user_suggestion":user_suggestion}
-
-	#make report message about user's biodata
-	msg = "NAME: "+user_firstname+"\n"
-	msg+= "Username  : @"+user_username+"\n"
-	msg+= "Chat ID : @"+user_chatid+"\n"
-	msg+= "Suggestion  : "+user_suggestion+"\n"
-
-	print(users_data)
-	print("\n")
-	print(msg)
-
-	#send message to user
-	bot.send_message(chat_id=293125876, text=msg, parse_mode=telegram.ParseMode.MARKDOWN)
 
 @run_async	
 def post(bot, update):
@@ -173,7 +136,6 @@ developer_handler  = CommandHandler('developer', developer)
 help_handler       = CommandHandler('help', help)
 myid_handler       = CommandHandler('myid', myid)
 pingteam_handler   = CommandHandler('pingteam', pingteam)
-suggestion_handler = CommandHandler('suggestion', suggestion, pass_args=True)
 post_handler       = CommandHandler('post', post)
 #####################################################################################################################
 
@@ -185,7 +147,6 @@ dispatcher.add_handler(developer_handler)
 dispatcher.add_handler(help_handler)
 dispatcher.add_handler(myid_handler)
 dispatcher.add_handler(pingteam_handler)
-dispatcher.add_handler(suggestion_handler)
 dispatcher.add_handler(post_handler)
 
 #####################################################################################################################
