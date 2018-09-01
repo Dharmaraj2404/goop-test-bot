@@ -59,12 +59,12 @@ except ValueError as e:
 
 #webhook setup
 #
-#Webhook(Heroku):
+Webhook(Heroku):
 #-------------------------------
-#PORT = int(os.environ.get('PORT', '5000'))
-#updater.start_webhook(listen="0.0.0.0", port=PORT, url_path=TOKEN)
+PORT = int(os.environ.get('PORT', '5000'))
+updater.set_webhook(listen="0.0.0.0", port=PORT, url_path=TOKEN)
 #
-#updater.bot.start_webhook("https://<appname>.herokuapp.com/" + TOKEN)
+updater.bot.start_webhook("https://goop-test-bot.herokuapp.com/" + TOKEN)
 #--------------------------------
 
 #handling command
